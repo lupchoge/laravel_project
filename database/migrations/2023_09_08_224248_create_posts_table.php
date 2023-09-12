@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('sepa');
-            $table->string('tricomas');
-            $table->string('terpenos');
+            $table->string('title');
+            $table->string('body');
             $table->timestamps();
         });
     }
@@ -23,7 +22,7 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down(): void 
     {
         Schema::dropIfExists('posts');
     }
